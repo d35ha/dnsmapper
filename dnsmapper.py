@@ -33,8 +33,6 @@ except:
 
 init()
 already_done = {}
-ip_4 = []
-ip_6 = []
 maximum_recursion_depth = 20
 name_servers = {'8.8.8.8':None,'8.8.4.4':None,'208.67.222.222':None,'208.67.220.220':None}
 for name_server in get_default_resolver().nameservers:
