@@ -33,6 +33,8 @@ except:
 
 init()
 already_done = {}
+ip_4 = []
+ip_6 = []
 maximum_recursion_depth = 20
 name_servers = {'8.8.8.8':None,'8.8.4.4':None,'208.67.222.222':None,'208.67.220.220':None}
 for name_server in get_default_resolver().nameservers:
@@ -546,7 +548,7 @@ def main(target):
         line = line.split("[$$$]" + done_data + "[$$$]")[0] + done_data
     final_data.append(line.replace("[NEW]","\n"))
   all_final = "\n".join([str(str(color_structure(str("[{}] " + "-" * (3 + (len(str(len(final_data) + 1))) - len(str(i + 1))) + ">") + " ").format(str(i + 1)) + final_data[i])) for i in range(len(final_data))])
-  return all_final,"",""
+  return all_final,ip_4,ip_6
 
 if __name__ == '__main__':
 
